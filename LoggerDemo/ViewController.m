@@ -1,12 +1,5 @@
-//
-//  ViewController.m
-//  LoggerDemo
-//
-//  Created by Yongpeng Zhu 朱永鹏 on 2019/7/22.
-//  Copyright © 2019 Yongpeng Zhu 朱永鹏. All rights reserved.
-//
-
 #import "ViewController.h"
+#import "HCKeepBGRunManager.h"
 
 @interface ViewController ()
 
@@ -16,8 +9,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [NSTimer scheduledTimerWithTimeInterval: 0.001
+                                                  target: self
+                                                selector:@selector(onTick:)
+                                                userInfo: nil repeats:YES];
+    
+    [[HCKeepBGRunManager shareManager] startBGRun];
 }
 
+-(void)onTick:(NSTimer *)timer {
+    NSDate * now = [NSDate date];
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+    [outputFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss:SSS"];
+    NSString *newDateString = [outputFormatter stringFromDate:now];
+    NSLog(@"时间 %@", newDateString);
+}
 
 @end

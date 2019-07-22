@@ -13,6 +13,8 @@
 		4F768C5C22E59FE60003A246 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F768C5B22E59FE60003A246 /* Assets.xcassets */; };
 		4F768C5F22E59FE60003A246 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F768C5D22E59FE60003A246 /* LaunchScreen.storyboard */; };
 		4F768C6222E59FE60003A246 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F768C6122E59FE60003A246 /* main.m */; };
+		4F768C6A22E5A0EF0003A246 /* HCKeepBGRunManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F768C6922E5A0EF0003A246 /* HCKeepBGRunManager.m */; };
+		4F768C6C22E5A1380003A246 /* 菊花台.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F768C6B22E5A1380003A246 /* 菊花台.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		4F768C5E22E59FE60003A246 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F768C6022E59FE60003A246 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F768C6122E59FE60003A246 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F768C6822E5A0EF0003A246 /* HCKeepBGRunManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCKeepBGRunManager.h; sourceTree = "<group>"; };
+		4F768C6922E5A0EF0003A246 /* HCKeepBGRunManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCKeepBGRunManager.m; sourceTree = "<group>"; };
+		4F768C6B22E5A1380003A246 /* 菊花台.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "菊花台.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,7 @@
 		4F768C5122E59FE60003A246 /* LoggerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4F768C6B22E5A1380003A246 /* 菊花台.mp3 */,
 				4F768C5222E59FE60003A246 /* AppDelegate.h */,
 				4F768C5322E59FE60003A246 /* AppDelegate.m */,
 				4F768C5522E59FE60003A246 /* ViewController.h */,
@@ -67,6 +73,8 @@
 				4F768C5D22E59FE60003A246 /* LaunchScreen.storyboard */,
 				4F768C6022E59FE60003A246 /* Info.plist */,
 				4F768C6122E59FE60003A246 /* main.m */,
+				4F768C6822E5A0EF0003A246 /* HCKeepBGRunManager.h */,
+				4F768C6922E5A0EF0003A246 /* HCKeepBGRunManager.m */,
 			);
 			path = LoggerDemo;
 			sourceTree = "<group>";
@@ -102,6 +110,11 @@
 				TargetAttributes = {
 					4F768C4E22E59FE60003A246 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -131,6 +144,7 @@
 				4F768C5F22E59FE60003A246 /* LaunchScreen.storyboard in Resources */,
 				4F768C5C22E59FE60003A246 /* Assets.xcassets in Resources */,
 				4F768C5A22E59FE60003A246 /* Main.storyboard in Resources */,
+				4F768C6C22E5A1380003A246 /* 菊花台.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F768C6A22E5A0EF0003A246 /* HCKeepBGRunManager.m in Sources */,
 				4F768C5722E59FE60003A246 /* ViewController.m in Sources */,
 				4F768C6222E59FE60003A246 /* main.m in Sources */,
 				4F768C5422E59FE60003A246 /* AppDelegate.m in Sources */,
@@ -288,6 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8MRL9B64V;
 				INFOPLIST_FILE = LoggerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L8MRL9B64V;
 				INFOPLIST_FILE = LoggerDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
